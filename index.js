@@ -6,6 +6,9 @@ const app = express()
 const cors = require('cors')
 app.use(cors())
 
+app.get('/', (req, res) => {
+    res.sendFile("index.html");
+});
 
 url = 'https://www.feastingathome.com/vegan-dinner-recipes/'
 
