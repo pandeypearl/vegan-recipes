@@ -18,7 +18,7 @@ router.get('/', function(_req, res) {
 
 url = 'https://www.feastingathome.com/vegan-dinner-recipes/'
 
-app.get('/results', (_req, res) => {
+app.get('https://vegan-recipes-6gdm.onrender.com/results', (_req, res) => {
         axios(url)
             .then(response => {
                 const html = response.data
