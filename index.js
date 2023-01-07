@@ -18,7 +18,7 @@ router.get('/', function(_req, res) {
 
 url = 'https://www.feastingathome.com/vegan-dinner-recipes/'
 
-app.get('https://vegan-recipes-6gdm.onrender.com/results', (_req, res) => {
+app.get('/results', (_req, res) => {
         axios(url)
             .then(response => {
                 const html = response.data
@@ -38,4 +38,5 @@ app.get('https://vegan-recipes-6gdm.onrender.com/results', (_req, res) => {
 })
 
 app.use('/', router);
+app.use(express.static(path.join(__dirname, 'src')));
 app.listen(PORT, () => console.log('server running on PORT ${PORT}'))

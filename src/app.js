@@ -8,7 +8,7 @@ const searchInput = document.querySelector("[data-search]");
 
 
 //Getting API data and rendering it
-fetch('http://localhost:8000/results')
+fetch('https://vegan-recipes-6gdm.onrender.com/results')
     .then(response => response.json())
     .then(data => {
         recipes = data.map(recipe => {
