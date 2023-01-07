@@ -2,17 +2,23 @@ const PORT = process.env.PORT || 8000
 const express = require('express')
 const axios = require('axios')
 const cheerio = require('cheerio')
+const path = require('path');
 const app = express()
+const router = express.Router();
 const cors = require('cors')
 app.use(cors())
 
-app.get('/', (req, res) => {
-    res.sendFile("index.html")
-})
+// app.get('/', (_req, res) => {
+//     res.sendFile("index.html")
+// })
+
+router.get('/', function(_req, res) { 
+    res.sendFile(path.join(__dirname + '/index.html'));  
+});
 
 url = 'https://www.feastingathome.com/vegan-dinner-recipes/'
 
-app.get('/results', (req, res) => {
+app.get('/results', (_req, res) => {
         axios(url)
             .then(response => {
                 const html = response.data
@@ -31,5 +37,5 @@ app.get('/results', (req, res) => {
             }).catch((err) => console.log(err))
 })
 
-
+app.use('/', router);
 app.listen(PORT, () => console.log('server running on PORT ${PORT}'))
