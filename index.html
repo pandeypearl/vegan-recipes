@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Vegan Recipes">
+    <meta name="keywords" content="Vegan Recipes,Vegan Meals, Healty Meals, Vegan Food">
+    <meta name="author" content="Pretty Pandey">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vegan Recipes</title>
+
+
+    <link rel="stylesheet" href="src/styles.css">
+
+</head>
+<body style="background-image: url('src/img/green.jpg');">
+
+    <nav>
+        <a class="api-btn" href="http://localhost:8000/results" target="_blank">API</a>
+    </nav>
+
+    <div class="wrapper">
+        <main>
+            <h1>Vegan Recipes</h1>
+            <p>Healthy, quick, and easy plant based meals</p>
+
+            <div class="search-container">
+                <input placeholder="search recipes...   " type="text" name="search" id="search" data-search>
+            </div>
+
+            <div class="recipe-items" data-recipe-items-container>
+                <template class="item-container" data-recipe-template>
+                    <div class="item">
+                        <h2 class="header" data-header></h2>
+                        <a href="" class="body" data-body target="_blank"></a>
+                    </div>
+                </template>
+                <p class="empty">No results found</p>
+            </div>
+        </main>
+        
+    </div>
+
+    <footer>
+        <small>Designed and Developed by &copy;&nbsp; <strong><a href="https://www.prettypandey.dev">Pretty Pandey</a></strong>&nbsp; <span id="year"></span></small>
+    </footer>
+
+    <script src="src/app.js"></script>
+</body>
+</html>

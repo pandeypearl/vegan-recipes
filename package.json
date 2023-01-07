@@ -1,0 +1,26 @@
+{
+  "name": "vegan-recipes",
+  "version": "1.0.0",
+  "description": "Collection of vegan recipes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://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@github.com/pandeypearl/vegan-recipes.git"
+  },
+  "author": "Pretty Pandey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pandeypearl/vegan-recipes/issues"
+  },
+  "homepage": "https://github.com/pandeypearl/vegan-recipes#readme",
+  "dependencies": {
+    "axios": "^1.2.2",
+    "cheerio": "^1.0.0-rc.12",
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  }
+}
