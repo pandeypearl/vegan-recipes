@@ -13,7 +13,7 @@ app.use(cors())
 // })
 
 router.get('/', function(_req, res) {
-    res.sendFile(path.join(__dirname + 'public/index.html'));
+    res.sendFile(path.join(__dirname + '/index.html'));
 });
 
 url = 'https://www.feastingathome.com/vegan-dinner-recipes/'
